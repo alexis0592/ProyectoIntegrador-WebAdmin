@@ -85,7 +85,7 @@ angular.module('ubicameUdeaApp.controllers', [])
 		$scope.unidad = Unidad.get({id : $stateParams.id});
 	})
 	.controller('UnidadCreateController', function ($scope,$http, $state, $stateParams, Unidad) {
-		$http.get("http://localhost:3000/tiposunidad").success(function(response) {
+		$http.get("https://ubicame-udea.herokuapp.com/tiposunidad").success(function(response) {
         	$scope.tiposUnidad = response;
 			console.log($scope.tiposUnidad);
     	}).error(function(err){
@@ -130,7 +130,7 @@ angular.module('ubicameUdeaApp.controllers', [])
 		$scope.departamento = Departamento.get({id : $stateParams.id});
 	})
 	.controller('DepartamentoCreateController', function ($scope,$http, $state, $stateParams, Departamento) {
-		$http.get("http://localhost:3000/unidades").success(function(response) {
+		$http.get("https://ubicame-udea.herokuapp.com/unidades").success(function(response) {
         	$scope.unidades = response;
     	}).error(function(err){
 			console.log(err);
@@ -175,19 +175,19 @@ angular.module('ubicameUdeaApp.controllers', [])
 		$scope.ubicacion = Ubicacion.get({id : $stateParams.id});
 	})
 	.controller('UbicacionCreateController', function ($scope,$http, $state, $stateParams, Ubicacion) {
-		$http.get("http://localhost:3000/unidades").success(function(response) {
+		$http.get("https://ubicame-udea.herokuapp.com/unidades").success(function(response) {
         	$scope.unidades = response;
     	}).error(function(err){
 			console.log(err);
 		});
 	
-	$http.get("http://localhost:3000/bloques").success(function(response) {
+	$http.get("https://ubicame-udea.herokuapp.com/bloques").success(function(response) {
         	$scope.bloques = response;
     	}).error(function(err){
 			console.log(err);
 		});
 	
-	$http.get("http://localhost:3000/departamentos").success(function(response) {
+	$http.get("https://ubicame-udea.herokuapp.com/departamentos").success(function(response) {
         	$scope.departamentos = response;
     	}).error(function(err){
 			console.log(err);
