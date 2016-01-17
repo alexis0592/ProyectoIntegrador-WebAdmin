@@ -1,5 +1,5 @@
 /**
- * Created by Sandeep on 01/06/14.
+ * Created by Cristian Correa, Yefry Calderon, Daniela Serna
  */
 angular.module('ubicameUdeaApp.controllers', [])
 //CONTROLLERS BLOQUES
