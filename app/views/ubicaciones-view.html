@@ -1,0 +1,25 @@
+<h1>Ubicaciones</h1>
+<h1><small>Detalle Ubicación</small></h1>
+<table class="table table-condensed">
+    <tr>
+        <th style="display:none;">Id</th>
+		<th>Bloque</th>
+		<th>Oficina</th>
+		<th>Latitud</th>
+		<th>Longitud</th>
+		<th>Departamento</th>
+		<th>Unidad</th>
+    </tr>
+	<tr>
+		<td style="display:none;">{{ubicacion._id}}</td>
+		<td>{{ubicacion.bloque.numero_bloque}}</td>
+		<td>{{ubicacion.oficina}}</td>
+		<td>{{ubicacion.latitud}}</td>
+		<td>{{ubicacion.longitud}}</td>
+		<td>{{ubicacion.departamento.nombre}}</td>
+		<td>{{ubicacion.unidad.nombre}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary btn-lg" ui-sref="editUbicacion({id:ubicacion._id})">Editar</a>
+</div>

@@ -1,0 +1,15 @@
+<h1>Bloques</h1>
+<h1><small>Detalle Bloque</small></h1>
+<table class="table bloquetable">
+    <tr>
+		<th style="display:none;">Id</th>
+        <th>Número del bloque</th>
+    </tr>
+    <tr>
+		<td style="display:none;">{{bloque._id}}</td>
+		<td>{{bloque.numero_bloque}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary btn-lg" ui-sref="editBloque({id:bloque._id})">Editar</a>
+</div>

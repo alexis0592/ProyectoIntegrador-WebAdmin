@@ -1,0 +1,32 @@
+<h1>Usuarios</h1>
+<div>
+	<a ui-sref="newUsuario" class="btn-primary btn-lg nodecoration pull-right">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		Agregar nuevo Usuario
+	</a>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Lista de usuarios
+	</div>
+<table class="table bloquetable">
+	<tr>
+		<th style="display:none;">Id</th>
+		<th>Nombre Completo</th>
+		<th>Nombre de usuario</th>
+		<th>Opciones</th>
+	</tr>
+    <tr ng-repeat="usuario in usuarios">
+        <td style="display:none;">{{usuario._id}}</td>
+		<td>{{usuario.nombre}}</td>
+		<td>{{usuario.nombre_usuario}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewUsuario({id:usuario._id})">Ver</a>
+            <a class="btn btn-danger"  ng-click="deleteUsuario(usuario)">Eliminar</a>
+        </td>
+    </tr>
+</table>
+</div>

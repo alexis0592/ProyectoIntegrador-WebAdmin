@@ -1,0 +1,31 @@
+<h1>Tipos de Unidad</h1>
+<div>
+<a ui-sref="newTipoUnidad" class="btn-primary btn-lg nodecoration pull-right">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+	Agregar nuevo tipo de unidad
+	</a>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Lista de tipos de unidad
+	</div>
+
+<table class="table bloquetable">
+	<tr>
+		<th style="display:none;">Id</th>
+		<th>Nombre</th>
+		<th>Opciones</th>
+	</tr>
+    <tr ng-repeat="tipoUnidad in tiposUnidad">
+        <td style="display:none;">{{tipoUnidad._id}}</td>
+		<td>{{tipoUnidad.nombre}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewTipoUnidad({id:tipoUnidad._id})">Ver</a>
+            <a class="btn btn-danger"  ng-click="deleteTipoUnidad(tipoUnidad)">Eliminar</a>
+        </td>
+    </tr>
+</table>
+</div>

@@ -1,0 +1,30 @@
+<h1>Bloques</h1>
+<div>
+	<a ui-sref="newBloque" class="btn-primary btn-lg nodecoration pull-right">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		Agregar nuevo Bloque
+	</a>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Lista de bloques
+	</div>
+<table class="table bloquetable">
+	<tr>
+		<th style="display:none;">Id</th>
+		<th>Número del bloque</th>
+		<th>Opciones</th>
+	</tr>
+    <tr ng-repeat="bloque in bloques">
+        <td style="display:none;">{{bloque._id}}</td>
+		<td>{{bloque.numero_bloque}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewBloque({id:bloque._id})">Ver</a>
+            <a class="btn btn-danger"  ng-click="deleteBloque(bloque)">Eliminar</a>
+        </td>
+    </tr>
+</table>
+</div>

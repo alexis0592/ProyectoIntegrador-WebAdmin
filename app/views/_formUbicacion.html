@@ -1,0 +1,31 @@
+<input type="hidden" ng-model="ubicacion._id" class="form-control" id="id" placeholder="Id de la ubicación"/>
+<div class="form-group">
+	<label for="repeatSelectBloque" class="control-label">Bloque</label>
+    <select id="repeatSelectBloque" name="repeatSelectBloque" class="form-control" ng-model="bloqueSeleccionada" ng-change="changedBloques(bloqueSeleccionada)" ng-options="bloque.numero_bloque for bloque in bloques">
+		</select>	
+</div>
+<div class="form-group">
+	<label for="oficina" class="control-label">Oficina</label>
+    <input type="text" ng-model="ubicacion.oficina" class="form-control" id="oficina" placeholder="Oficina"/>
+</div>
+<div class="form-group">
+	<label for="latitud" class="control-label">Latitud</label>
+    <input type="text" ng-model="ubicacion.latitud" class="form-control" id="latitud" placeholder="Latitud de la oficina"/>
+</div>
+<div class="form-group">
+	<label for="longitud" class="control-label">Longitud</label>
+    <input type="text" ng-model="ubicacion.longitud" class="form-control" id="longitud" placeholder="Longitud de la oficina"/>
+</div>
+<div class="form-group">
+	<label for="repeatSelectUnidad" class="control-label">Unidad</label>
+    <select id="repeatSelectUnidad" name="repeatSelectUnidad" class="form-control" ng-model="unidadSeleccionada" ng-change="changedUnidades(unidadSeleccionada)" ng-options="unidad.nombre for unidad in unidades">
+		</select>	
+</div>
+<div class="form-group">
+	<label for="repeatSelectDepartamento" class="control-label">Departamento</label>
+    <select id="repeatSelectDepartamento" name="repeatSelectDepartamento" class="form-control" ng-model="departamentoSeleccionada" ng-change="changedDepartamentos(departamentoSeleccionada)" ng-options="departamento.nombre for departamento in departamentos">
+		</select>	
+</div>
+<div class="form-group">
+	<input type="submit" class="btn btn-primary btn-lg" value="Guardar"/>
+</div>

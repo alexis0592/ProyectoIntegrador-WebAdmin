@@ -1,0 +1,13 @@
+<input type="hidden" ng-model="unidad._id" class="form-control" id="id" placeholder="Id de la unidad"/>
+<div class="form-group">
+	<label for="nombre" class="control-label">Nombre</label>
+    <input type="text" ng-model="unidad.nombre" class="form-control" id="nombre" placeholder="Nombre de la unidad"/>
+</div>
+<div class="form-group">
+	<label for="repeatSelect" class="control-label">Tipo de unidad</label>
+    <select id="repeatSelect" name="repeatSelect" class="form-control" ng-model="tipoUnidadSeleccionada" ng-change="changed(tipoUnidadSeleccionada)" ng-options="tipoUnidad.nombre for tipoUnidad in tiposUnidad">
+		</select>	
+</div>
+<div class="form-group">
+	<input type="submit" class="btn btn-primary btn-lg" value="Guardar"/>
+</div>

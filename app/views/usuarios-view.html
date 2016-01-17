@@ -1,0 +1,17 @@
+<h1>Usuarios</h1>
+<h1><small>Detalle Usuario</small></h1>
+<table class="table bloquetable">
+    <tr>
+		<th style="display:none;">Id</th>
+		<th>Nombre Completo</th>
+		<th>Nombre de usuario</th>
+	</tr>
+    <tr>
+        <td style="display:none;">{{usuario._id}}</td>
+		<td>{{usuario.nombre}}</td>
+		<td>{{usuario.nombre_usuario}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary btn-lg" ui-sref="editUsuario({id:usuario._id})">Editar</a>
+</div>

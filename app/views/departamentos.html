@@ -1,0 +1,32 @@
+<h1>Departamentos</h1>
+<div>
+	<a ui-sref="newDepartamento" class="btn-primary btn-lg nodecoration pull-right">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			Agregar nuevo departamento
+	</a>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Lista de departamentos
+	</div>
+	<table class="table table-striped">
+	<tr>
+		<th style="display:none;">Id</th>
+		<th>Nombre</th>
+		<th>Unidad</th>
+		<th>Opciones</th>
+	</tr>
+    <tr ng-repeat="departamento in departamentos">
+		<td style="display:none;">{{departamento._id}}</td>
+		<td>{{departamento.nombre}}</td>
+		<td>{{departamento.unidad.nombre}}</td>
+		<td>
+			<a class="btn btn-primary" ui-sref="viewDepartamento({id:departamento._id})">Ver</a>
+			<a class="btn btn-danger"  ng-click="deleteDepartamento(departamento)">Eliminar</a>
+		</td>
+    </tr>
+	</table>
+</div>

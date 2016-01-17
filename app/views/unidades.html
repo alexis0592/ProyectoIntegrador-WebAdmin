@@ -1,0 +1,32 @@
+<h1>Unidades</h1>
+<div>
+	<a ui-sref="newUnidad" class="btn-primary btn-lg nodecoration pull-right">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			Agregar nueva unidad
+	</a>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Lista de unidades
+	</div>
+	<table class="table table-striped">
+	<tr>
+		<th style="display:none;">Id</th>
+		<th>Nombre</th>
+		<th>Tipo Unidad</th>
+		<th>Opciones</th>
+	</tr>
+    <tr ng-repeat="unidad in unidades">
+		<td style="display:none;">{{unidad._id}}</td>
+		<td>{{unidad.nombre}}</td>
+		<td>{{unidad.tipoUnidad.nombre}}</td>
+		<td>
+			<a class="btn btn-primary" ui-sref="viewUnidad({id:unidad._id})">Ver</a>
+			<a class="btn btn-danger"  ng-click="deleteUnidad(unidad)">Eliminar</a>
+		</td>
+    </tr>
+	</table>
+</div>

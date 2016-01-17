@@ -1,0 +1,17 @@
+<h1>Unidades</h1>
+<h1><small>Detalle Unidad</small></h1>
+<table class="table table-condensed">
+    <tr>
+        <th style="display:none;">Id</th>
+		<th>Nombre</th>
+		<th>Tipo de Unidad</th>
+    </tr>
+	<tr>
+		<td style="display:none;">{{unidad._id}}</td>
+        <td>{{unidad.nombre}}</td>
+		<td>{{unidad.tipoUnidad.nombre}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary btn-lg" ui-sref="editUnidad({id:unidad._id})">Editar</a>
+</div>

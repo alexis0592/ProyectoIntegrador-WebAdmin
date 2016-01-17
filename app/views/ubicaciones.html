@@ -1,0 +1,40 @@
+<h1>Ubicaciones</h1>
+<div>
+	<a ui-sref="newUbicacion" class="btn-primary btn-lg nodecoration pull-right">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			Agregar nueva ubicación
+	</a>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Lista de ubicaciones
+	</div>
+	<table class="table table-striped">
+	<tr>
+		<th style="display:none;">Id</th>
+		<th>Bloque</th>
+		<th>Oficina</th>
+		<th>Latitud</th>
+		<th>Longitud</th>
+		<th>Departamento</th>
+		<th>Unidad</th>
+		<th>Opciones</th>
+	</tr>
+    <tr ng-repeat="ubicacion in ubicaciones">
+		<td style="display:none;">{{ubicacion._id}}</td>
+		<td>{{ubicacion.bloque.numero_bloque}}</td>
+		<td>{{ubicacion.oficina}}</td>
+		<td>{{ubicacion.latitud}}</td>
+		<td>{{ubicacion.longitud}}</td>
+		<td>{{ubicacion.departamento.nombre}}</td>
+		<td>{{ubicacion.unidad.nombre}}</td>
+		<td>
+			<a class="btn btn-primary" ui-sref="viewUbicacion({id:ubicacion._id})">Ver</a>
+			<a class="btn btn-danger"  ng-click="deleteUbicacion(ubicacion)">Eliminar</a>
+		</td>
+    </tr>
+	</table>
+</div>

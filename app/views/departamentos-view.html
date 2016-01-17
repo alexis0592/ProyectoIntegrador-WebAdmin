@@ -1,0 +1,17 @@
+<h1>Departamentos</h1>
+<h1><small>Detalle Departamento</small></h1>
+<table class="table table-condensed">
+    <tr>
+        <th style="display:none;">Id</th>
+		<th>Nombre</th>
+		<th>Unidad</th>
+    </tr>
+	<tr>
+		<td style="display:none;">{{departamento._id}}</td>
+        <td>{{departamento.nombre}}</td>
+		<td>{{departamento.unidad.nombre}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary btn-lg" ui-sref="editDepartamento({id:departamento._id})">Editar</a>
+</div>
