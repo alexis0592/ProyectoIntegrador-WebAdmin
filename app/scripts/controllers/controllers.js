@@ -237,6 +237,7 @@ angular.module('ubicameUdeaApp.controllers', [])
 			}
 		};
 	})
+	
 	.controller('UsuarioViewController', function ($scope, $stateParams, Usuario) {
 		$scope.usuario = Usuario.get({id : $stateParams.id});
 	})
