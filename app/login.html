@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html data-ng-app="ubicameUdeaApp" ng-controller="LoginController">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/"/>
+    <title>Ubícame UdeA App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row top-buffer">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div>
+				<h1 class="text-center">Ubícame UdeA</h1>
+				<br/>
+				<br/>
+				<div class="row" ng>
+					<div class="col-md-6">
+						<img src="images/logo_udea.jpg" alt="Logo UdeA" class="img-thumbnail" width="300">
+					</div>
+					<div class="col-md-6">
+						<form class="form-horizontal" role="form" ng-submit="loginUsuario()">
+							<div class="form-group">
+								<label for="nombreUsuario" class="control-label">Nombre de usuario</label>
+								<input type="text" ng-model="usuario.nombre_usuario" class="form-control" id="nombreUsuario"/>
+							</div>
+							<div class="form-group">
+								<label for="contrasena" class="control-label">Contraseña</label>
+								<input type="password" ng-model="usuario.contrasena" class="form-control" id="contrasena"/>
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary btn-lg" value="Entrar"/>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+            </div>
+        </div>
+    </div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>  
+        <script src="scripts/angular-ui-router.min.js"></script>  
+        <script type="text/javascript" src="scripts/controllers/controllers.js"></script>
+        <script type="text/javascript" src="scripts/controllers/services.js"></script>
+        <script type="text/javascript" src="scripts/controllers/directives.js"></script>
+        <script type="text/javascript" src="scripts/controllers/filters.js"></script>
+            <!-- endbuild -->
+</body>
+</html>

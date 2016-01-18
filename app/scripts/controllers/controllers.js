@@ -259,4 +259,35 @@ angular.module('ubicameUdeaApp.controllers', [])
 			$scope.usuario = Usuario.get({id : $stateParams.id});
 		};
 		$scope.loadUsuario();
-	});
+	})
+	.controller('LoginController', function ($scope, $state, $stateParams, $window, $http, Usuario) {
+	$scope.usuario = new Usuario();	
+	$scope.loginUsuario = function (){		
+		
+		if(($scope.usuario.nombre_usuario == "") || ($scope.usuario.contrasena == "")){
+			alert('Debe ingresar un usuario y una contraseña');
+			$scope.validado = false;
+		}else{
+			$scope.validado = true;
+		}
+		
+		if($scope.validado == true){
+			$http.get("https://ubicame-udea.herokuapp.com/usuarios/" 
+				  + $scope.usuario.nombre_usuario 
+				  + "/" 
+				  + $scope.usuario.contrasena).success(function(response) {
+        		
+				$scope.oldUsuario = response;
+
+				if(response.length == 0){
+					alert('Usuario no encontrado');	
+				}else{
+					$window.location.href = '/index.html#/home';	
+				}		
+			}).error(function(err){
+				console.log(err);
+			});	
+		}
+	};
+});
+

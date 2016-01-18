@@ -112,7 +112,8 @@ angular.module('ubicameUdeaApp').config(function ($stateProvider, $httpProvider)
   
   $stateProvider.state('login', {
         url: '/login',
-        templateUrl: 'views/login.html',
+        templateUrl: 'login.html',
+        controller: 'LoginController'
     });
   
   $stateProvider.state('home', {
@@ -121,5 +122,5 @@ angular.module('ubicameUdeaApp').config(function ($stateProvider, $httpProvider)
     });
   
 }).run(function ($state) {
-  $state.go('home');
+  $state.go('login');
 });
